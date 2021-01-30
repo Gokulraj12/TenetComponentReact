@@ -7,7 +7,16 @@ const App = () => {
     return (
         <div className="ui container comments">
             {/*Component Nesting*/}
-            <CommentDetail />
+            <CommentDetail
+                name="Gokul"
+                text="First Comment!"
+                avatar="https://source.unsplash.com/random/"
+            />
+            <CommentDetail
+                name="Ram"
+                text="Second comment!"
+                avatar="https://source.unsplash.com/random"
+            />
         </div>
     );
 };
