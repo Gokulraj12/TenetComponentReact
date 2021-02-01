@@ -35,12 +35,16 @@ class App extends React.Component {
 
   }
   render() {
-    return (
-      <div>Latitude: {this.state.lat}
-        <br />
-      Error:{this.state.errorMessage}
-      </div>
-    );
+    //conditional rendering using if
+    if (this.state.lat && !this.state.errorMessage) {
+      return <div>Latitude: {this.state.lat} </div>
+    }
+    else if (!this.state.lat && this.state.errorMessage) {
+      return <div>Error: {this.state.errorMessage}</div>
+    }
+    else {
+      return <div>Loading........</div>
+    }
   }
 }
 
