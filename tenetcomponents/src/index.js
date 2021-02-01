@@ -8,6 +8,9 @@ import CommentDetail from './CommentDetail';
 const App = () => {
     return (
         <div className="ui container comments">
+            <ApprovalCard>
+                Are you sure about this?
+            </ApprovalCard>
             {/*Component Nesting*/}
             <ApprovalCard>
                 <CommentDetail
