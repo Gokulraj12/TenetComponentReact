@@ -48,7 +48,7 @@ class App extends React.Component {
       return <div>Error: {this.state.errorMessage}</div>
     }
     else {
-      return <Spinner message="Please accept location request" />
+      return <Spinner />
     }
   }
   //Lifecycle methods Refactoring
