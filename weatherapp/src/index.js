@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Spinner from './Spinner';
 import WeatherDisplay from './WeatherDisplay';
 
 //import WeatherDisplay from './WeatherDisplay';
@@ -47,7 +48,7 @@ class App extends React.Component {
       return <div>Error: {this.state.errorMessage}</div>
     }
     else {
-      return <div>Loading........</div>
+      return <Spinner message="Please accept location request" />
     }
   }
   //Lifecycle methods Refactoring
