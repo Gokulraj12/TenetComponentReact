@@ -39,8 +39,8 @@ class App extends React.Component {
   //   }
   // );
 
-  render() {
-    //conditional rendering using if
+  //Rendercontent() will contain the conditional stmts which can be rendered using render method
+  renderContent() {
     if (this.state.lat && !this.state.errorMessage) {
       return <WeatherDisplay lat={this.state.lat} />
     }
@@ -50,6 +50,22 @@ class App extends React.Component {
     else {
       return <Spinner />
     }
+  }
+
+  render() {
+    //conditional rendering using if - we need to avoid conditional rendering inside render method
+    // if (this.state.lat && !this.state.errorMessage) {
+    //   return <WeatherDisplay lat={this.state.lat} />
+    // }
+    // else if (!this.state.lat && this.state.errorMessage) {
+    //   return <div>Error: {this.state.errorMessage}</div>
+    // }
+    // else {
+    //   return <Spinner />
+    // }
+    return (
+      <div>{this.renderContent()}</div>
+    );
   }
   //Lifecycle methods Refactoring
   componentDidMount() {
