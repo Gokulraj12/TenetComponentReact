@@ -8,7 +8,7 @@ class VideoList extends React.Component {
         const { videos, onVideoSelect } = this.props;
 
         const renderList = videos.map((video) => {
-            return <VideoCard onVideoSelect={onVideoSelect} video={video} />
+            return <VideoCard onVideoSelect={onVideoSelect} video={video} key={video.snippet.title} />
         });
 
         return (
