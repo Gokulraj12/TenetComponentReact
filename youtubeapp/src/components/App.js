@@ -38,7 +38,7 @@ class App extends React.Component {
                         <div className="eleven wide column">
                             <VideoDetails video={this.state.selectedVideo} />
                         </div>
-                        <div className="five wide column">
+                        <div className="five wide column" style={{ cursor: 'pointer' }} >
                             <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
                         </div>
                     </div>
