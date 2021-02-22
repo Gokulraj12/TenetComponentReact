@@ -1,10 +1,11 @@
 import React from 'react';
 
+
 class VideoDetails extends React.Component {
     render() {
 
         const { video } = this.props;
-        console.log(video);
+        //console.log(video);
 
         if (!video) {
             return <div>Loading.............</div>
