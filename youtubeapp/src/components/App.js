@@ -28,7 +28,11 @@ class App extends React.Component {
 
 
         this.setState(
-            { videos: response.data.items, selectedVideo: response.data.items[0] }
+            {
+                videos: response.data.items,
+                selectedVideo: response.data.items[0],
+                // comments: commentResponse.data.items[0].snippet.topLevelComment
+            }
         );
     };
 
